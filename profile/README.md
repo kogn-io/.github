@@ -1,29 +1,34 @@
 # kognio
 
-Open building blocks for RDF and knowledge-graph systems in the Java and Spring
-world.
+Java and Spring building blocks for working with knowledge graphs. The open ones
+live here.
 
-The premise: a knowledge graph is not a storage detail you bolt on at the end.
-It is a modelling decision, and it deserves the same care as the rest of the
-domain model -- an explicit vocabulary, validation you can run in CI, and a
-boundary between the model and the engine that stores it.
+The name is a domain hack -- kogn.io, from Latin *cognoscere*, to know. That is
+what the work is about: the part of a system that knows things, and keeping that
+knowledge usable beyond the application that produced it.
 
-So everything here is cut hexagonally. The domain model is technology-agnostic;
-the triple store sits behind a port. Replacing the engine is an adapter change,
-not a rewrite.
-
-## Building blocks
+## What is open here
 
 - **[rdf-core](https://github.com/kogn-io/rdf-core)** -- technology-agnostic RDF
   data model, dataset and SHACL ports, and an RDF4J-backed adapter. The
-  substrate the rest builds on. Released to Maven Central under `io.kogn.rdf`.
+  substrate the rest builds on. On Maven Central under `io.kogn.rdf`.
 
-## Why W3C standards
+## How things are built here
 
-RDF, OWL, SHACL and SPARQL are boring in the best sense: specified, stable, and
-surrounded by tooling nobody here has to maintain. A proprietary DSL would be
-quicker to invent and slower to live with -- a parser, a validator, a query
-language and an ecosystem, all of it yours to keep alive forever.
+W3C standards over homegrown DSLs. RDF, OWL, SHACL and SPARQL are boring in the
+best sense: specified, stable, and surrounded by tooling nobody here has to
+maintain. A proprietary format is quicker to invent and slower to live with -- a
+parser, a validator, a query language and an ecosystem, all of it yours to keep
+alive forever.
+
+Boundaries that hold. The domain model stays independent of the engine that
+stores it, so swapping the store is an adapter change rather than a rewrite.
+
+## Who
+
+Fred Hauschel, Java architect and developer in Munich, working on the seam
+between ordinary Spring applications and knowledge-graph technology --
+[hauschel.de/tech](https://www.hauschel.de/tech/).
 
 ## Licence
 
